@@ -2,6 +2,7 @@ let storage = {
 
     pivo: [
         {
+
             id: 10001,
             naziv: "Zlatni medvjed",
             vrstaPiva: "Pilsner",
