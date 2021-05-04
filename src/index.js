@@ -78,3 +78,4 @@ app.get('/rezervacije/pice', (req, res) => {
 
 app.listen(port, () => console.log(`\n\n[DONE] Backend se vrti na http://localhost:${port}/\n\n`));
 
+
