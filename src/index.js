@@ -1,18 +1,81 @@
 import express from 'express';
 import storage from './memory_storage.js';
 import cors from 'cors';
+import connect from './db.js';
+
+
 
 const app = express(); // instanciranje aplikacije
 const port = 3330; // port na kojem će web server slušati
 
-app.use(cors());
+console.log(storage)
+app.use(cors()); // najlaksi nacin ako zelim na svim rutama koristitim cors 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.json({});
+
+
+
+app.get('/pivnice', async (req, res) => {
+    let db = await connect()
+    let query = req.query;
+
+    let cursor = await db.collection("pivnice").find()
+    let results = await cursor.toArray()
+
+    res.json(results)
 });
 
-//lista Piva
+app.get('/svapiva', async (req, res) => {
+    let db = await connect()
+
+    let cursor = await db.collection("piva").find({})
+    let results = await cursor.toArray()
+
+    res.json(results)
+})
+app.get('/sezonskapiva', async (req, res) => {
+    let db = await connect()
+
+    let cursor = await db.collection("piva").find({ tip: "Sezonska Piva" })
+    let results = await cursor.toArray()
+
+    res.json(results)
+})
+app.get('/stalnapiva', async (req, res) => {
+    let db = await connect()
+
+    let cursor = await db.collection("piva").find({ tip: "Stalna Piva" })
+    let results = await cursor.toArray()
+
+    res.json(results)
+})
+/*
+app.get('/', (req, res) => {
+    let p = storage.piva
+    res.json(p);
+});
+
+app.get('/pivnice', async (req, res) => {
+    let db = await connect()
+    let query = req.query;
+
+    let cursor = await db.collection("pivnice").find()
+    let results = await cursor.toArray()
+
+    res.json(results)
+});
+
+
+app.get('/pivnice', async (req, res) => {
+    let db = await connect();
+
+    let cursor = await db.collection("pivnice").find({});
+    let results = await cursor.toArray();
+
+    res.json(results);
+})
+
+// lista Piva
 app.get('/pivo', (req, res) => {
     res.json(storage.pivo);
 });
@@ -73,7 +136,7 @@ app.get('/rezervacije/pice', (req, res) => {
     let rezervacija = req.params.tipRezervacije;
     res.json(storage.rezervacije.filter((x) => x.tipRezervacije == "pice"));
 });
-
+*/
 
 
 app.listen(port, () => console.log(`\n\n[DONE] Backend se vrti na http://localhost:${port}/\n\n`));
