@@ -50,8 +50,7 @@ app.get('/stalnapiva', async (req, res) => {
     res.json(results)
 })
 
-/*
-app.post('/pivnice', async (req, res) => {
+app.post('/rezervacije', async (req, res) => {
     let data = req.body;
 
     data.postedAt = new Date().getTime();
@@ -60,7 +59,7 @@ app.post('/pivnice', async (req, res) => {
     let db = await connect();
 
     let result = await db.collection('rezervacije').insertOne(data);
-
+    console.log(result)
     if (result && result.insertedCount == 1) {
         res.json(result.ops[0]);
     } else {
@@ -70,6 +69,9 @@ app.post('/pivnice', async (req, res) => {
     }
 
 })
+
+/*
+
 
 app.get('/', (req, res) => {
     let p = storage.piva
