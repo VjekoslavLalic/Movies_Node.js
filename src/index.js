@@ -49,7 +49,14 @@ app.get('/stalnapiva', async (req, res) => {
 
     res.json(results)
 })
+app.get('/fantompiva', async (req, res) => {
+    let db = await connect()
 
+    let cursor = await db.collection("piva").find({ tip: "Fantom" })
+    let results = await cursor.toArray()
+
+    res.json(results)
+})
 app.post('/rezervacije', async (req, res) => {
     let data = req.body;
 
