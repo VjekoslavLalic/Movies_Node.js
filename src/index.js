@@ -49,7 +49,28 @@ app.get('/stalnapiva', async (req, res) => {
 
     res.json(results)
 })
+
 /*
+app.post('/pivnice', async (req, res) => {
+    let data = req.body;
+
+    data.postedAt = new Date().getTime();
+    delete data._id;
+
+    let db = await connect();
+
+    let result = await db.collection('rezervacije').insertOne(data);
+
+    if (result && result.insertedCount == 1) {
+        res.json(result.ops[0]);
+    } else {
+        res.json({
+            status: 'fail'
+        });
+    }
+
+})
+
 app.get('/', (req, res) => {
     let p = storage.piva
     res.json(p);
