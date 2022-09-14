@@ -1,6 +1,6 @@
 import mongodb from 'mongodb';
 const mongo = require('mongodb')
-let connection_string = 'mongodb+srv://AdminVL:52639714qwe@vl-cluster1.rqipiez.mongodb.net/?retryWrites=true&w=majority'
+let connection_string = process.env.CONNECTION_STRING;
 
 let client = new mongo.MongoClient(connection_string, {
     useNewUrlParser: true,

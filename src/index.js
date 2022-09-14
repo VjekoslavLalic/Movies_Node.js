@@ -6,7 +6,7 @@ import connect from './db.js';
 
 
 const app = express(); // instanciranje aplikacije
-const port = 3330; // port na kojem će web server slušati
+const port = process.env.PORT;; // port na kojem će web server slušati
 
 console.log(storage)
 app.use(cors()); // najlaksi nacin ako zelim na svim rutama koristitim cors 
