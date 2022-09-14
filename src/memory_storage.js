@@ -1,5 +1,36 @@
 let storage = {
-
+    onama: [
+        {
+            naziv: "VARIONICA",
+            label: "Mjesto gdje se pibo kuha je srce nase pivovare",
+            opis: "Varionicu (brewhouse) dizajnirali smo sami kako bi bila maksimalno prilagođena našim potrebama i željama. U jednom kuhanju možemo proizvesti 6.000 litara sladovine koja će kasnije postati pivo. Automatizirana varionica je računalno vođena što nam omogućuje bolju kontrolu procesa, veću standardizaciju te paralelno kuhanje 6-7 uvaraka dnevno. Bakreni detalj na modernom dizajnu podsjetnik je na našu tradiciju. Proces kuhanja piva u varionici traje 6 – 8 sati. Sastoji se od ukomljavanja (miješanje slada s vrućom vodom kako bi se iz slada oslobodio šećer za fermentaciju), cijeđenja (odvajanje sladovine od tropa, koji prodajemo lokalnim farmerima kao prvoklasnu stočnu hranu), kuhanja (steriliziranje sladovine kuhanjem i dodavanje hmelja) te whirlpoola (odvajanje preostalih čestica iz sladovine te eventualno dodatno dodavanje hmelja). Nakon toga, sladovina se hladi i prebacuje u fermentore.",
+            img: "https://m-blog.vecernji.hr/media/content_blog_images/8bedaf1d118ab3aa02249f9c59edec62.jpg",
+        },
+        {
+            naziv: "PODRUM",
+            label: "U podrumu za fermentaciju i odležavanje događa se magija: sladovina postaje pivo",
+            opis: "Nakon kuhanja pivo se hladi i u njega se dodaje kvasac koji će u idućim danima, hraneći se šećerom, sladovinu pretvoriti u pivo odnosno u alkohol i CO2. Ovisno o vrsti piva koju kuhamo, koriste se lager ili ale kvasac. Nakon otprilike tjedan dana fermentacije, kvasac je završio s poslom i napravio pivo koje će odležati još nekoliko tjedana kako bi se formirali okusi i arome. U neka se piva dodaje hmelj procesom suhog hmeljenja, direktnim ubacivanjem hmelja u tank za odležavanje, kako bi se dodatno postigle neodoljive arome. Naš podrum se sastoji od tankova od 3.000, 6.000, 12.000 te 24.000 litara u kojima pivo fermentira i odležava.",
+            img: "https://www.telegram.hr/wp-content/uploads/2019/05/medvedgrad-2-1.jpg",
+        },
+        {
+            naziv: "PUNJENJE",
+            label: "Kvalitetan proces punjenja piva ključan je za vrhunski proizvod",
+            opis: "Punilica za boce omogućuje nam značajno ubrzanje i poboljšanje kvalitete punjenja, a zbog minimalne količine preostalog kisika u bocama vijek trajanja piva je povećan. Točeno pivo strojno se puni u kegove od 10, 20, 30 i 50 litara. Svoja piva ne filtriramo, a kako bismo dodatno osigurali konzistentnost i kvalitetu koristimo centrifugalni separator s kojim postižemo bistrinu.",
+            img: "https://www.vecernji.hr/media/img/c1/a2/4d6fb46502e608e6691d.jpeg",
+        },
+        {
+            naziv: "KONTROLA",
+            label: "Labaratorij kontrolira svaki korak proizvodnje",
+            opis: "Laboratorij je opremljen vrhunskom opremom za kontrolu kvalitete piva. Svakodnevno se rade fizikalno-kemijske i mikrobiološke analize kako bi se osigurala kvaliteta gotovog proizvoda. Pivo ujednačene kvalitete rezultat je stalnog nadzora proizvodnog procesa, u kojem pratimo boju, alkohol, CO2, ph, IBU i mikrobiološku stabilnost piva.",
+            img: "image.png",
+        },
+        {
+            naziv: "HLADNI LANAC",
+            label: "Hladno skladištenje i hladni transport",
+            opis: "Kada je pivo napunjeno, proces brige i upravljanja samim pivom nije završen. Prije same konzumacije potrebno je osigurati da se pivo skladišti i prevozi u kvalitetnim uvjetima. Naše prirodno pivo bez konzervansa uvijek mora biti na hladnom i, po mogućnosti, mračnom mjestu.",
+            img: "https://prehrambeno-tehnoloska-skola.hr/wp-content/uploads/2022/05/279846556_1101245633768835_8296141467240793424_n.jpg",
+        }
+    ],
     piva: [
         {
 

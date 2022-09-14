@@ -13,7 +13,15 @@ app.use(cors()); // najlaksi nacin ako zelim na svim rutama koristitim cors
 app.use(express.json());
 
 
+app.get('/', async (req, res) => {
+    let db = await connect()
+    let query = req.query;
 
+    let cursor = await db.collection("onama").find()
+    let results = await cursor.toArray()
+
+    res.json(results)
+});
 
 app.get('/pivnice', async (req, res) => {
     let db = await connect()
